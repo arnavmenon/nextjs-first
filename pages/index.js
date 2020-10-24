@@ -1,17 +1,21 @@
 import Layout from '../components/layout';
 import fetch from 'isomorphic-unfetch';
+import Link from "next/link";
 import React from 'react'
 
 function Index ({data}) {
     return (
         <Layout>
             <div>
-                <h1>Latest Games</h1>
-                {data.map((item, i) => {
-                   return (
-                   <li key={i}>{item.name}</li>
-                   )
-               })}
+                <h1>Highest Rated Games</h1>
+                {data.map((item, i) => (
+                   <li key={i}>
+                    <Link as={`/${item.id}`} href="/[id]">
+                      <a> {item.name} </a>
+                    </Link>
+                    </li>
+                   
+               ))}
             </div>
         </Layout>
     );

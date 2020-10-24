@@ -10,13 +10,13 @@ const Navbar = () => {
 
             <style jsx>{`
                 ul {
-                    background: #333;
-                    color: #fff;
+                    background: cadetblue;
+                    color: whitesmoke;
                     list-style: none;
                     display: flex;
                 }
                 ul li {
-                    font-size: 22px;
+                    font-size: 25px;
                     margin-right: 50px;
                 }
                 ul li a {
